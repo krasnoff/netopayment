@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'neto-payment';
+
+  active: boolean;
+
+  constructor() {
+    this.active = false;
+  }
+
+  onClick() {
+    this.active = !this.active;
+  }
 }
