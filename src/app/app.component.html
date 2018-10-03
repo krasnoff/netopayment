@@ -1,14 +1,19 @@
 <header>
   <div class="logoDiv"><img src="images/logo.png" alt="company logo" class="logo"></div>
+  <div class="OpenMenu">
+    <i class="fa fa-bars" (click)="onClick()"></i>
+  </div>
   <div class="menuItems" [ngClass]="{'active': active}">
     <a href="#about">About US</a>
     <a href="#industries">Industries</a>
     <a href="#paymentmethod">Payment Method</a>
     <a href="#features">Features</a>
     <a href="#contactus">Contact Us</a>
-    </div>
-  <div class="phoneDiv"><img src="images/phone_icon.png" alt="phone icon">+(972)722-159-030</div>
-  <div class="OpenMenu">
-        <i class="fa fa-bars" (click)="onClick()"></i>
   </div>
+  <div class="phoneDiv"><img src="images/phone_icon.png" alt="phone icon">+(972)722-159-030</div>
 </header>
+<div class="content_1">
+  <div class="title">Enterprise Payment<br>Solution Gateway</div>
+  <div class="subTitle">One seamlessly API gateway with over 100 payment methods</div>
+  <div class="joinButton"><a href="#about">JOIN NOW</a></div>
+</div>

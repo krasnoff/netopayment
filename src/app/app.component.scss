@@ -2,11 +2,17 @@ $color-green: #63caa9;
 $color-font: #717171;
 $base-font: 'Montserrat';
 $width-cellular: 600px;
+$width-navigation-menu: 1140px;
 
 body, div {
     font-family: $base-font;
     font-size: 12px;
     color: $color-font;
+}
+
+body {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
 }
 
 a {
@@ -18,7 +24,7 @@ a {
 
 header
 {
-    max-width: 1140px;
+    max-width: $width-navigation-menu;
     margin-right: auto;
     margin-left: auto;
     padding-top: 20px;
@@ -51,6 +57,17 @@ header
 
         @media screen and (max-width: $width-cellular) {
             display: none;
+            width: 100%;
+
+            a {
+                width: 100%;
+                display: block;
+
+                &:hover {
+                    color: white;
+                    background-color: $color-green;
+                }
+            }
         }
 
         
@@ -83,6 +100,59 @@ header
         
         @media screen and (min-width: $width-cellular) {
             display: none;
+        }
+    }
+}
+
+%contents {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    background-repeat: no-repeat;
+}
+
+.content_1
+{
+    @extend %contents;
+    height: 1000px;
+    padding-top: 45px;
+    background-image: url("/images/background_1.png");
+    background-position: top right;
+    background-position-y: 45px;
+
+    %text {
+        width: $width-navigation-menu;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .title {
+        @extend %text;
+        padding-top: 263px;
+        font-weight: 700;
+        font-size: 64px;
+        font-family: 'Montserrat';
+        color: $color-green;
+    }
+
+    .subTitle {
+        @extend %text;
+        font-weight: 700;
+        font-size: 20px;
+        padding-top: 21px;
+        padding-bottom: 52px;
+    }
+
+    .joinButton {
+        @extend %text;
+        
+        a {
+            color: white;
+            background-color: $color-green;
+            font-weight: 700;
+            padding: 17px 45px 17px 45px;
+            border-radius: 30px;
+            font-size: 18px;
         }
     }
 }
