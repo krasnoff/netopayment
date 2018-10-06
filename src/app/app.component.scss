@@ -1,8 +1,38 @@
 $color-green: #63caa9;
 $color-font: #717171;
+$color-light-blue: #E1F3FD;
 $base-font: 'Montserrat';
 $width-cellular: 600px;
 $width-navigation-menu: 1140px;
+
+%innerText {
+    font-size: 15px;
+    color: #565554;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+%title {
+    font-weight: 600;
+    font-size: 26px;
+}
+
+%hr {
+    width: 133px;
+    position: absolute;
+           
+    height: 2px;
+    border: 0;
+    border-top: 2px solid $color-green;
+    margin-top: 7px;
+    margin-bottom: 0px;
+    padding: 0; 
+}
+
+.NetoPayment {
+    color: $color-green;
+    font-weight: 700;
+}
 
 body, div {
     font-family: $base-font;
@@ -154,5 +184,85 @@ header
             border-radius: 30px;
             font-size: 18px;
         }
+    }
+}
+
+.content_2
+{
+    height: 586px;
+    background-image: url("/images/pic1.png");
+    background-position: left;
+    background-repeat: no-repeat;
+
+    .text
+    {
+        max-width: 945px;
+        width: 945px;
+        float: right;
+        padding-top: 80px;
+
+        .title
+        {
+            @extend %title;
+        }
+
+        hr
+        {
+            @extend %hr;
+        }
+
+        .innertext
+        {
+            padding-top: 45px;
+            font-size: 13px;
+
+            &>div
+            {
+                width: 520px;
+
+                p {
+                    @extend %innerText;
+                }
+            }
+        }
+    }
+}
+
+.content_3
+{
+    height: 1011px;
+    background-color: $color-light-blue;
+    background-image: url("/images/pic2.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+
+    .text {
+        padding-left: 390px;
+        padding-top: 81px;
+        width: 423px;
+
+        .title {
+            @extend %title;
+        }
+
+        hr
+        {
+            @extend %hr;
+        }
+
+        .innertext {
+            @extend %innerText;
+            padding-top: 41px;
+        }
+    }
+
+    .boxContent {
+        width: 1310px;
+        height: 386px;
+        background-color: white;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 30px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 }
